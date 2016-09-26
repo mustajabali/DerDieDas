@@ -3,9 +3,10 @@ package com.example.must.my.derdiedas;
 import android.os.AsyncTask;
 import java.net.InetAddress;
 
-import static com.example.must.my.derdiedas.MainActivity.fileRead;
-import static com.example.must.my.derdiedas.MainActivity.firebaseinit;
-import static com.example.must.my.derdiedas.MainActivity.istate;
+import static com.example.must.my.derdiedas.Constants.istate;
+import static com.example.must.my.derdiedas.SelectActivity.fileRead;
+import static com.example.must.my.derdiedas.SelectActivity.firebaseinit;
+
 
 /**
  * Created by mustajab on 9/26/16.
@@ -25,10 +26,10 @@ public class InternetCheck extends AsyncTask<String, Void, Boolean> {
     @Override
     protected void onPostExecute(Boolean result) {
         if (result) {
-            istate = MainActivity.INTERNETSTATE.CONNECTED;
+            istate = Constants.INTERNETSTATE.CONNECTED;
             firebaseinit();
         } else {
-            istate = MainActivity.INTERNETSTATE.NOTCONNECTED;
+            istate = Constants.INTERNETSTATE.NOTCONNECTED;
             fileRead();
         }
 
