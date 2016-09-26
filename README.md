@@ -7,3 +7,6 @@ plural of these words,
 Best Application to learn Articles.
 You can download and enjoy as a beginner (Especially for German A1 Level).
 Play with it while traveling.
+
+
+Added File Storage for offline mode
